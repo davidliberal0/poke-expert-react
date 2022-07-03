@@ -1,5 +1,5 @@
 import React from "react";
-import Searchbar from "./Searchbar";
+import SearchbarTT from "./SearchbarTT";
 
 function MainSearch() {
   return (
@@ -13,7 +13,7 @@ function MainSearch() {
             PokeDex Database
           </div>
         </div>
-        <Searchbar />
+        <SearchbarTT />
       </div>
     </div>
   );
