@@ -17,7 +17,7 @@ const Searchbar = () => {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    const searchTerm = event.target.elements.query.value;
+    const searchTerm = event.target.elements.query.value.toLowerCase();
     const url = "https://pokeapi.co/api/v2/pokemon/";
     const res = await axios.get(`${url}${searchTerm}`);
     console.log(res);
