@@ -23,6 +23,7 @@ const Searchbar = () => {
     console.log(res);
     found = true;
     receiveData(res);
+    updateDesc(res);
   }
 
   const receiveData = (res) => {
@@ -38,6 +39,27 @@ const Searchbar = () => {
 
     console.log(pokeInfo);
   };
+
+  async function updateDesc(res) {
+    const specURL = `https://pokeapi.co/api/v2/pokemon-species/`;
+    const dexNumber = `${res.data["game_indices"][8]["game_index"]}`;
+    const fetchSpec = await axios.get(`${specURL}${dexNumber}`);
+    const desc = document.querySelector("#poke-desc");
+    setPokeInfo((prev) => ({
+      ...prev,
+      desc: fetchSpec.data["flavor_text_entries"][1]["flavor_text"],
+    }));
+  }
+
+  // Asynchronous function that makes a call to a different route
+  // for retrieving the pokemon description
+  // async function displayDesc(res) {
+  //   const specURL = `https://pokeapi.co/api/v2/pokemon-species/`;
+  //   const dexNumber = `${res.data["game_indices"][8]["game_index"]}`;
+  //   const fetchSpec = await axios.get(`${specURL}${dexNumber}`);
+  //   const desc = document.querySelector("#poke-desc");
+  //   desc.innerHTML = fetchSpec.data["flavor_text_entries"][1]["flavor_text"];
+  // }
 
   // const recieveImg = (receiveData) => {
   //   return `${receiveData.data["sprites"]["front_default"]}`;
@@ -95,6 +117,7 @@ const Searchbar = () => {
           pokeImg={pokeInfo.img}
           pokeName={pokeInfo.name}
           typeOne={pokeInfo.type}
+          desc={pokeInfo.desc}
         />
       </div>
     );

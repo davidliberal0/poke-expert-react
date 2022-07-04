@@ -19,7 +19,7 @@ const PokeCard = (props) => {
           <div className="type">{props.typeOne}</div>
           <div className="type-two"></div>
         </div>
-        <div className="poke-desc"></div>
+        <div className="poke-desc">{props.desc}</div>
       </div>
     </section>
   );
