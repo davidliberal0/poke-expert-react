@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./css/pokecard.css";
 
 // All Possible Types w/ Color Hex Values
@@ -45,9 +45,28 @@ const rgbas = {
 };
 
 const PokeCard = (props) => {
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
+
   return (
     <section className="rect-section text-white">
-      <div className="rect">
+      <div
+        className="rect"
+        style={{
+          boxShadow: isHovering
+            ? `${rgbas[props.typeOne]}0.56) 0px 22px 70px 4px`
+            : "none",
+        }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <img src={props.pokeImg} alt="" className="legendary-image mr-6" />
         <div className="rect-name-type mr-6">
           <h3 className="pokemon-name">{props.pokeName}</h3>
