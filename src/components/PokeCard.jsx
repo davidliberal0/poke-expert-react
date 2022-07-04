@@ -76,7 +76,7 @@ const PokeCard = (props) => {
             className="type"
             style={{ backgroundColor: typeColor[props.typeOne] }}
           >
-            {props.typeOne}
+            {props.typeOne.charAt(0).toUpperCase() + props.typeOne.slice(1)}
           </div>
           <div className="type-two"></div>
         </div>
