@@ -60,6 +60,7 @@ const PokeCard = (props) => {
       <div
         className="rect"
         style={{
+          display: "flex",
           boxShadow: isHovering
             ? `${rgbas[props.typeOne]}0.56) 0px 22px 70px 4px`
             : "none",
