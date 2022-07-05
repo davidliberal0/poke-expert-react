@@ -62,3 +62,7 @@ form {
   height: 35px;
   display: flex;
 }
+
+.result-text {
+  text-align: center;
+}

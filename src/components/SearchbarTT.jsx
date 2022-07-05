@@ -112,6 +112,7 @@ const Searchbar = () => {
             </div>
           </div>
         </section>
+        <h2 className="text-white mt-6 result-text">Results...</h2>
         <PokeCard
           dexNum={pokeInfo.dexNum}
           pokeImg={pokeInfo.img}
