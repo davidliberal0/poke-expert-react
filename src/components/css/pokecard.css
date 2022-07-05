@@ -4,7 +4,8 @@
 }
 
 .rect-section {
-  height: 50vh;
+  margin-top: 3.5rem;
+  /* height: 50vh; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
