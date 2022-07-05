@@ -51,42 +51,6 @@ const Searchbar = () => {
     }));
   }
 
-  // Asynchronous function that makes a call to a different route
-  // for retrieving the pokemon description
-  // async function displayDesc(res) {
-  //   const specURL = `https://pokeapi.co/api/v2/pokemon-species/`;
-  //   const dexNumber = `${res.data["game_indices"][8]["game_index"]}`;
-  //   const fetchSpec = await axios.get(`${specURL}${dexNumber}`);
-  //   const desc = document.querySelector("#poke-desc");
-  //   desc.innerHTML = fetchSpec.data["flavor_text_entries"][1]["flavor_text"];
-  // }
-
-  // const recieveImg = (receiveData) => {
-  //   return `${receiveData.data["sprites"]["front_default"]}`;
-  // };
-
-  // const recieveName = (receiveData) => {
-  //   return `${
-  //     receiveData.data["name"].charAt(0).toUpperCase() +
-  //     receiveData.data["name"].slice(1)
-  //   }`;
-  // };
-
-  // const recieveDexNum = (receiveData) => {
-  //   return `#${receiveData.data["game_indices"][8]["game_index"]}`;
-  // };
-
-  // const recieveTypeOne = (receiveData) => {
-  //   return receiveData.data["types"][0]["type"]["name"];
-  // };
-
-  // const recieveTypeTwo = (receiveData) => {
-  //   if (receiveData.data["types"][1]["type"]["name"]) {
-  //     return receiveData.data["types"][1]["type"]["name"];
-  //   }
-  //   return;
-  // };
-
   // Holds the rendered jsx
   let content;
 
