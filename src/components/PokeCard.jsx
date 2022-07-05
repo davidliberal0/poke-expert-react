@@ -74,7 +74,10 @@ const PokeCard = (props) => {
           <h3 className="dex-number">{props.dexNum}</h3>
           <div
             className="type"
-            style={{ backgroundColor: typeColor[props.typeOne] }}
+            style={{
+              backgroundColor: typeColor[props.typeOne],
+              color: "black",
+            }}
           >
             {props.typeOne.charAt(0).toUpperCase() + props.typeOne.slice(1)}
           </div>
