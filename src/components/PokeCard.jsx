@@ -55,6 +55,8 @@ const PokeCard = (props) => {
     setIsHovering(false);
   };
 
+  console.log(props.typeTwo);
+
   return (
     <section className="rect-section text-white">
       <div
@@ -81,7 +83,21 @@ const PokeCard = (props) => {
           >
             {props.typeOne.charAt(0).toUpperCase() + props.typeOne.slice(1)}
           </div>
-          <div className="type-two"></div>
+          <div
+            className="type-two"
+            style={
+              "typeTwo" in props
+                ? {
+                    backgroundColor: typeColor[props.typeTwo],
+                    textTransform: "capitalize",
+                    color: "black",
+                    display: "block",
+                  }
+                : {}
+            }
+          >
+            {"typeTwo" in props ? props.typeTwo : ""}
+          </div>
         </div>
         <div className="poke-desc">{props.desc}</div>
       </div>

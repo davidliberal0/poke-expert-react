@@ -36,6 +36,15 @@
   width: 4rem;
 }
 
+.type-two {
+  display: none;
+  margin-top: 3px;
+  text-align: center;
+  background-color: #f15b5e;
+  border-radius: 5px;
+  width: 4rem;
+}
+
 .poke-desc {
   width: 898px;
 }

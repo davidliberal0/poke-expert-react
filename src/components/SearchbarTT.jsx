@@ -27,15 +27,31 @@ const Searchbar = () => {
   }
 
   const receiveData = (res) => {
-    setPokeInfo((prev) => ({
-      ...prev,
-      name: `${
-        res.data["name"].charAt(0).toUpperCase() + res.data["name"].slice(1)
-      }`,
-      type: res.data["types"][0]["type"]["name"],
-      img: `${res.data["sprites"]["front_default"]}`,
-      dexNum: `#${res.data["game_indices"][8]["game_index"]}`,
-    }));
+    if (res.data["types"].length == 1) {
+      setPokeInfo((prev) => ({
+        ...prev,
+        name: `${
+          res.data["name"].charAt(0).toUpperCase() + res.data["name"].slice(1)
+        }`,
+        type: res.data["types"][0]["type"]["name"],
+        img: `${res.data["sprites"]["front_default"]}`,
+        dexNum: `#${res.data["game_indices"][8]["game_index"]}`,
+      }));
+      if ("typeTwo" in pokeInfo) {
+        delete pokeInfo.typeTwo;
+      }
+    } else {
+      setPokeInfo((prev) => ({
+        ...prev,
+        name: `${
+          res.data["name"].charAt(0).toUpperCase() + res.data["name"].slice(1)
+        }`,
+        type: res.data["types"][0]["type"]["name"],
+        typeTwo: res.data["types"][1]["type"]["name"],
+        img: `${res.data["sprites"]["front_default"]}`,
+        dexNum: `#${res.data["game_indices"][8]["game_index"]}`,
+      }));
+    }
 
     console.log(pokeInfo);
   };
@@ -83,6 +99,7 @@ const Searchbar = () => {
           pokeName={pokeInfo.name}
           typeOne={pokeInfo.type}
           desc={pokeInfo.desc}
+          typeTwo={pokeInfo.hasOwnProperty("typeTwo") ? pokeInfo.typeTwo : null}
         />
       </div>
     );
