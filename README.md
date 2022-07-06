@@ -2,6 +2,8 @@
 
 ## General Info
 
+A modernized Pokedex for the web.
+
 ## Technologies
 
 - HTML & CSS
@@ -9,6 +11,18 @@
 - React.JS (create-react-app)
 - TailWind.css
 - Node (NPM)
+
+## Features
+
+- Modern Dark-Mode UI
+- Streamlined
+- Open Source
+- Large Open Source API (PokeAPI)
+- Built for the web & Maintained by Web Developers
+
+## Screenshots
+
+![Site-Search-Capture](./src/components/imgs/site-search-capture.png)
 
 ## Setup
 
