@@ -1,3 +1,4 @@
+<img align="center" src="./src/components/imgs/pikachu.png">
 <h1 align="center">Material Bread</h1>
 
 ## Table of Contents
