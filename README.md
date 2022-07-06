@@ -1,5 +1,8 @@
-<img align="center" width="150" height="150" src="./src/components/imgs/pikachu.png">
-<h1 align="center">Material Bread</h1>
+<p align="center">
+  <img width="150" height="150" src="./src/components/imgs/pikachu.png">
+</p>
+
+<h1 align="center">PokeExpert.</h1>
 
 ## Table of Contents
 
