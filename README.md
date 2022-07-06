@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="150" height="150" src="./src/components/imgs/pikachu.png">
+  <img width="150" height="150" src="./src/components/imgs/pikachuTwo.png">
 </p>
 
 <h1 align="center">PokeExpert.</h1>
