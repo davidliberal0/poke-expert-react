@@ -1,0 +1,27 @@
+.contributor-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+}
+
+.img-border {
+  background-color: white;
+  width: 230px;
+  height: 230px;
+  border-radius: 400px;
+}
+
+.middle-black {
+  background-color: black;
+  width: 330px;
+  height: 330px;
+  border-radius: 400px;
+}
+
+.outer-most {
+  background-color: #29b840;
+  width: 360px;
+  height: 360px;
+  border-radius: 400px;
+  box-shadow: rgba(41, 184, 64, 0.56) 0px 0px 70px 4px;
+}
