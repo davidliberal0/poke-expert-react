@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./css/searchbar.css";
+import "../css/searchbar.css";
 import PokeCard from "./PokeCard";
 import axios from "axios";
 

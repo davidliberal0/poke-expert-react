@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./css/pokecard.css";
+import "../css/pokecard.css";
 
 // All Possible Types w/ Color Hex Values
 const typeColor = {

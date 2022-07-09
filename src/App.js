@@ -1,14 +1,16 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import MainSearch from "./components/MainSearch";
-import PokeCard from "./components/PokeCard";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/homepage/Home";
+import SearchPage from "./components/mainSearch/SearchPage";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <MainSearch />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/database" element={<SearchPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
