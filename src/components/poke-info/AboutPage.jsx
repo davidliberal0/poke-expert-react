@@ -1,8 +1,15 @@
 import React from "react";
 import ContributorImg from "./ContributorImg";
+import Navbar from "../navbar/Navbar";
+import AboutHeading from "./AboutHeading";
 
 const AboutPage = () => {
-  return <ContributorImg />;
+  return (
+    <>
+      <Navbar />
+      <AboutHeading />
+    </>
+  );
 };
 
 export default AboutPage;
