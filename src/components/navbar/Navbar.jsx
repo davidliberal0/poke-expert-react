@@ -4,7 +4,7 @@ import "../css/navbar.css";
 
 function Nabar() {
   return (
-    <nav className="long-nav bg-black">
+    <nav className="long-nav bg-black fixed w-full">
       <div className="ml-4 mr-4">
         <div className="sm:flex justify-between">
           <Link to="/" className="p-3">
