@@ -1,13 +1,16 @@
 import React from "react";
-import ContributorImg from "./ContributorImg";
 import Navbar from "../navbar/Navbar";
 import AboutHeading from "./AboutHeading";
+import BuildInfo from "./BuildInfo";
+import TeamSection from "./TeamSection";
 
 const AboutPage = () => {
   return (
     <>
       <Navbar />
       <AboutHeading />
+      <TeamSection />
+      <BuildInfo />
     </>
   );
 };

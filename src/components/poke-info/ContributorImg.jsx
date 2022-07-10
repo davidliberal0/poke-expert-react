@@ -4,7 +4,7 @@ import "../css/contributerimg.css";
 // TODO: resize component - its clearly too large
 const ContributorImg = (props) => {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center pt-10 pb-10">
       <div className="outer-most flex items-center justify-center">
         <div className="middle-black flex items-center justify-center">
           <div className="img-border flex items-center justify-center">
