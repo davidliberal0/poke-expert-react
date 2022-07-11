@@ -1,0 +1,39 @@
+.blur-circle {
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #00ffc2 0deg,
+    #00f0ff 120.07deg,
+    #0077ff 179.52deg,
+    #ff0099 241.65deg,
+    #0470e5 299.6deg,
+    #00ffc2 360deg
+  );
+  border-radius: 50%;
+  font-size: 250px;
+  height: 2em;
+  width: 2em;
+  filter: blur(82px);
+  background-size: 100%;
+  animation: bganimation 15s infinite;
+}
+
+@keyframes bganimation {
+  0% {
+    bacground-position: 0% 50%;
+  }
+  50% {
+    bacground-position: 100% 50%;
+  }
+  100% {
+    bacground-position: 0% 50%;
+  }
+}
+
+img {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.img-comp {
+  width: 100%;
+  height: 100%;
+}

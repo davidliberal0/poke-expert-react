@@ -1,3 +1,26 @@
 .build-info-section {
-  height: 30vh;
+  height: 50vh;
+}
+
+.img-site {
+  width: 500px;
+}
+
+.img-cont {
+  width: 100%;
+}
+
+.main-info {
+  width: 1400px;
+}
+
+.info-of-build {
+  margin-right: 8rem;
+}
+
+.btn-process {
+  background-color: #ef4444;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
