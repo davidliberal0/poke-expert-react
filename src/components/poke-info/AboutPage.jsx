@@ -7,7 +7,6 @@ import TeamSection from "./TeamSection";
 const AboutPage = () => {
   return (
     <>
-      <Navbar />
       <AboutHeading />
       <TeamSection />
       <BuildInfo />

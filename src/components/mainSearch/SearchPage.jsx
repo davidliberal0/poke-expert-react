@@ -5,7 +5,6 @@ import MainSearch from "./MainSearch";
 const SearchPage = () => {
   return (
     <>
-      <Navbar />
       <MainSearch />
     </>
   );
