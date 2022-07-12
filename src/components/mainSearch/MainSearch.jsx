@@ -3,7 +3,7 @@ import SearchbarTT from "./SearchbarTT";
 
 function MainSearch() {
   return (
-    <div>
+    <div className="db-section" style={{ height: "80vh" }}>
       <section className="main-content">
         <div className="container-one flex justify-center items-center flex-col">
           <section className="heading mt-6 mb-6">
