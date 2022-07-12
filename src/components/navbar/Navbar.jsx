@@ -29,9 +29,9 @@ function Nabar() {
               </Link>
             </li>
             <li className="sm:inline-block" id="link-un">
-              <a href="#" className="p-3">
+              <Link to="/about" className="p-3">
                 About
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
