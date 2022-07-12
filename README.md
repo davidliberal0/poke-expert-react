@@ -7,12 +7,17 @@
 ## Table of Contents
 
 - [General info](#general-info)
+- [Design](#design)
 - [Technologies](#technologies)
 - [Setup](#setup)
 
 ## General Info
 
 A modernized Pokedex for the web.
+
+## Design
+
+Check out the designs here on --> [Figma](https://www.figma.com/file/Z67nDT7nboFqqhBSvlblCm/PokeExpert).
 
 ## Technologies
 
