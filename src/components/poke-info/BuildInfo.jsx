@@ -28,7 +28,7 @@ const BuildInfo = () => {
           </p>
           <br />
           <a href="https://www.figma.com/file/Z67nDT7nboFqqhBSvlblCm/PokeExpert">
-            <button type="button" class="btn-process">
+            <button type="button" className="btn-process">
               View the Process
             </button>
           </a>

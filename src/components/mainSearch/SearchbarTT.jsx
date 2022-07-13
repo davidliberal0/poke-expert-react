@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../css/searchbar.css";
 import PokeCard from "./PokeCard";
 import axios from "axios";
 
-let found = false;
-
 const Searchbar = () => {
   const [searchItem, isSubmitted] = useState("");
   const [pokeInfo, setPokeInfo] = useState({});
+  const [showCard, setShowCard] = useState(false);
 
   const handleChange = (event) => {
     isSubmitted({
@@ -21,9 +20,9 @@ const Searchbar = () => {
     const url = "https://pokeapi.co/api/v2/pokemon/";
     const res = await axios.get(`${url}${searchTerm}`);
     console.log(res);
-    found = true;
     receiveData(res);
     updateDesc(res);
+    setShowCard(true);
   }
 
   const receiveData = (res) => {
@@ -65,12 +64,13 @@ const Searchbar = () => {
       ...prev,
       desc: fetchSpec.data["flavor_text_entries"][1]["flavor_text"],
     }));
+    setShowCard(true);
   }
 
   // Holds the rendered jsx
   let content;
 
-  if (found) {
+  if (showCard) {
     content = (
       <div>
         <section className="search-section">
