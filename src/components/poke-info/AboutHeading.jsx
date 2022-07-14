@@ -9,7 +9,7 @@ const AboutHeading = () => {
       <div className="text-white">
         The minds behind {}
         <span className="font-bold text-red-500 tracking-normal">
-          Poke<span className="text-white">Expert.</span>
+          Poké<span className="text-white">Expert.</span>
         </span>
       </div>
     </div>

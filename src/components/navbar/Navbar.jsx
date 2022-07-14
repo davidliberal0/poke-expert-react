@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="sm:flex justify-between">
           <NavLink to="/" className="p-3">
             <h1 className="text-3xl text-white font-bold">
-              <span className="text-red-500">Poke</span>Expert.
+              <span className="text-red-500">Poké</span>Expert.
             </h1>
           </NavLink>
           <ul className="text-white sm:self-center border-t sm:border-none nav-links text-sm">
