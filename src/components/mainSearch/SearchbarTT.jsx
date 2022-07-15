@@ -51,8 +51,6 @@ const Searchbar = () => {
         dexNum: `#${res.data["game_indices"][8]["game_index"]}`,
       }));
     }
-
-    console.log(pokeInfo);
   };
 
   async function updateDesc(res) {

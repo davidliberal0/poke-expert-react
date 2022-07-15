@@ -55,8 +55,6 @@ const PokeCard = (props) => {
     setIsHovering(false);
   };
 
-  console.log(props.typeTwo);
-
   return (
     <section className="rect-section text-white">
       <div
