@@ -1,5 +1,6 @@
 .oval-one {
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   height: 50px;
   /* border: 2px solid red; */
   background-color: black;
@@ -10,7 +11,8 @@
 }
 
 .oval-two {
-  width: 930px;
+  width: 100%;
+  max-width: 930px;
   height: 35px;
   /* border: 2px solid blue; */
   border-radius: 50px;
@@ -28,7 +30,8 @@ input::placeholder {
 }
 
 .search-box {
-  width: 930px;
+  width: 100%;
+  max-width: 930px;
   height: 35px;
   /* border: 2px solid red; */
   padding-left: 0.5rem;
@@ -58,7 +61,8 @@ input::placeholder {
 }
 
 form {
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   height: 35px;
   display: flex;
 }

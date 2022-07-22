@@ -7,8 +7,8 @@ import { FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="footer-section flex items-center justify-center">
-      <div className="flex justify-center ez-div">
-        <div className="ft-oneCol" style={{ marginRight: "15rem" }}>
+      <div className="flex justify-between ez-div mt-3">
+        <div className="ft-oneCol" style={{ marginRight: "10rem" }}>
           <div className="text-3xl text-white font-bold mb-3">
             <span className="text-red-500">Poke</span>Expert.&#8482;
           </div>
@@ -37,10 +37,10 @@ const Footer = () => {
             </button>
           </div>
         </div>
-        <div className="" style={{ marginRight: "15rem" }}>
+        <div className="" style={{ marginRight: "10rem" }}>
           <div className="text-white font-bold text-xl">About</div>
         </div>
-        <div className="text-white" style={{ marginRight: "15rem" }}>
+        <div className="text-white" style={{ marginRight: "10rem" }}>
           <div className="text-xl font-bold mb-2">Developers</div>
           <div className="font-extralight">Documentation</div>
         </div>

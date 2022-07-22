@@ -1,8 +1,12 @@
 .footer-section {
-  height: 20vh;
+  padding-left: 5em;
+  padding-right: 5em;
+  margin-top: auto;
+  padding-top: 5px;
   border-top: 1px solid #ef4444;
 }
 
 .ez-div {
+  max-width: 80em;
   width: 100%;
 }

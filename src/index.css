@@ -2,11 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body,
+#root {
+  height: 100%;
+}
+
 body {
   font-family: "Nunito", sans-serif;
   background-color: #0f0f0f;
-  /* edit */
-  height: 100vh;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
 }
 
 code {

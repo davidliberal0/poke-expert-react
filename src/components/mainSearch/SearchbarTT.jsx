@@ -73,8 +73,8 @@ const Searchbar = () => {
       <div>
         <section className="search-section">
           <div className="oval-one">
-            <div className="oval-two">
-              <form action="" id="searchForm" onSubmit={handleSubmit}>
+            <form action="" id="searchForm" onSubmit={handleSubmit}>
+              <div className="oval-two">
                 <input
                   value={searchItem.query}
                   type="text"
@@ -83,11 +83,11 @@ const Searchbar = () => {
                   name="query"
                   onChange={handleChange}
                 />
-                <button type="submit">
-                  <i className="fa-solid fa-magnifying-glass text-white search-icon fa-2x"></i>
-                </button>
-              </form>
-            </div>
+              </div>
+              <button type="submit">
+                <i className="fa-solid fa-magnifying-glass text-white search-icon fa-2x"></i>
+              </button>
+            </form>
           </div>
         </section>
         <h2 className="text-white mt-6 result-text">Results...</h2>
@@ -106,8 +106,8 @@ const Searchbar = () => {
       <div>
         <section className="search-section">
           <div className="oval-one">
-            <div className="oval-two">
-              <form action="" id="searchForm" onSubmit={handleSubmit}>
+            <form action="" id="searchForm" onSubmit={handleSubmit}>
+              <div className="oval-two">
                 <input
                   value={searchItem.query}
                   type="text"
@@ -116,11 +116,11 @@ const Searchbar = () => {
                   name="query"
                   onChange={handleChange}
                 />
-                <button type="submit">
-                  <i className="fa-solid fa-magnifying-glass text-white search-icon fa-2x"></i>
-                </button>
-              </form>
-            </div>
+              </div>
+              <button type="submit">
+                <i className="fa-solid fa-magnifying-glass text-white search-icon fa-2x"></i>
+              </button>
+            </form>
           </div>
         </section>
       </div>
