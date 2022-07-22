@@ -39,15 +39,23 @@ const Footer = () => {
         </div>
         <div className="" style={{ marginRight: "10rem" }}>
           <div className="text-white font-bold text-xl">About</div>
+          <div className="text-white font-extralight">
+            <a href="/about">Team</a>
+          </div>
         </div>
         <div className="text-white" style={{ marginRight: "10rem" }}>
           <div className="text-xl font-bold mb-2">Developers</div>
-          <div className="font-extralight">Documentation</div>
+          <div className="font-extralight">
+            <a href="https://github.com/davidliberal0/poke-expert-react">
+              Documentation
+            </a>
+          </div>
         </div>
         <div className="text-white">
           <div className="text-xl font-bold mb-2">ORG</div>
           <div className="mb-1">Privacy</div>
           <div>Terms</div>
+          <div className="text-white font-extralight">License</div>
         </div>
       </div>
     </div>
