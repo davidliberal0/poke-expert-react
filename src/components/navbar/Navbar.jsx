@@ -4,7 +4,7 @@ import "../css/navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="long-nav bg-black fixed w-full">
+    <nav className="long-nav bg-black sticky top-0 w-full">
       <div className="ml-4 mr-4">
         <div className="sm:flex justify-between">
           <NavLink to="/" className="p-3">
