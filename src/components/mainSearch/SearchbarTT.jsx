@@ -2,11 +2,17 @@ import React, { useState, useEffect } from "react";
 import "../css/searchbar.css";
 import PokeCard from "./PokeCard";
 import axios from "axios";
+import { useTransition, animated } from "react-spring";
 
 const Searchbar = () => {
   const [searchItem, isSubmitted] = useState("");
   const [pokeInfo, setPokeInfo] = useState({});
   const [showCard, setShowCard] = useState(false);
+  const transition = useTransition(showCard, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    delay: 200,
+  });
 
   const handleChange = (event) => {
     isSubmitted({
@@ -86,19 +92,30 @@ const Searchbar = () => {
           </form>
         </div>
       </section>
-      {showCard ? (
-        <h2 className="text-white mt-6 result-text">Results...</h2>
-      ) : null}
-      {showCard ? (
-        <PokeCard
-          dexNum={pokeInfo.dexNum}
-          pokeImg={pokeInfo.img}
-          pokeName={pokeInfo.name}
-          typeOne={pokeInfo.type}
-          desc={pokeInfo.desc}
-          typeTwo={pokeInfo.hasOwnProperty("typeTwo") ? pokeInfo.typeTwo : null}
-        />
-      ) : null}
+      {transition((style, item) =>
+        item ? (
+          <animated.h2 style={style} className="text-white mt-6 result-text">
+            {" "}
+            Results...
+          </animated.h2>
+        ) : null
+      )}
+      {transition((style, item) =>
+        item ? (
+          <animated.div style={style}>
+            <PokeCard
+              dexNum={pokeInfo.dexNum}
+              pokeImg={pokeInfo.img}
+              pokeName={pokeInfo.name}
+              typeOne={pokeInfo.type}
+              desc={pokeInfo.desc}
+              typeTwo={
+                pokeInfo.hasOwnProperty("typeTwo") ? pokeInfo.typeTwo : null
+              }
+            />
+          </animated.div>
+        ) : null
+      )}
     </div>
   );
 };
