@@ -47,6 +47,6 @@
 }
 
 .poke-desc {
-  max-width: 100%;
-  max-width: 898px;
+  /* max-width: 100%; */
+  width: 898px;
 }

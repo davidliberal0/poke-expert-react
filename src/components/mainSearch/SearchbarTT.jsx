@@ -19,7 +19,7 @@ const Searchbar = () => {
     const searchTerm = event.target.elements.query.value.toLowerCase();
     const url = "https://pokeapi.co/api/v2/pokemon/";
     const res = await axios.get(`${url}${searchTerm}`);
-    console.log(res);
+    // console.log(res);
     receiveData(res);
     updateDesc(res);
     setShowCard(true);
@@ -65,32 +65,31 @@ const Searchbar = () => {
     setShowCard(true);
   }
 
-  // Holds the rendered jsx
-  let content;
-
-  if (showCard) {
-    content = (
-      <div>
-        <section className="search-section">
-          <div className="oval-one">
-            <form action="" id="searchForm" onSubmit={handleSubmit}>
-              <div className="oval-two">
-                <input
-                  value={searchItem.query}
-                  type="text"
-                  placeholder="START LOOKING FOR POKEMON..."
-                  className="search-box"
-                  name="query"
-                  onChange={handleChange}
-                />
-              </div>
-              <button type="submit">
-                <i className="fa-solid fa-magnifying-glass text-white search-icon fa-2x"></i>
-              </button>
-            </form>
-          </div>
-        </section>
+  return (
+    <div>
+      <section className="search-section">
+        <div className="oval-one">
+          <form action="" id="searchForm" onSubmit={handleSubmit}>
+            <div className="oval-two">
+              <input
+                value={searchItem.query}
+                type="text"
+                placeholder="START LOOKING FOR POKEMON..."
+                className="search-box"
+                name="query"
+                onChange={handleChange}
+              />
+            </div>
+            <button type="submit">
+              <i className="fa-solid fa-magnifying-glass text-white search-icon fa-2x"></i>
+            </button>
+          </form>
+        </div>
+      </section>
+      {showCard ? (
         <h2 className="text-white mt-6 result-text">Results...</h2>
+      ) : null}
+      {showCard ? (
         <PokeCard
           dexNum={pokeInfo.dexNum}
           pokeImg={pokeInfo.img}
@@ -99,35 +98,9 @@ const Searchbar = () => {
           desc={pokeInfo.desc}
           typeTwo={pokeInfo.hasOwnProperty("typeTwo") ? pokeInfo.typeTwo : null}
         />
-      </div>
-    );
-  } else {
-    content = (
-      <div>
-        <section className="search-section">
-          <div className="oval-one">
-            <form action="" id="searchForm" onSubmit={handleSubmit}>
-              <div className="oval-two">
-                <input
-                  value={searchItem.query}
-                  type="text"
-                  placeholder="START LOOKING FOR POKEMON..."
-                  className="search-box"
-                  name="query"
-                  onChange={handleChange}
-                />
-              </div>
-              <button type="submit">
-                <i className="fa-solid fa-magnifying-glass text-white search-icon fa-2x"></i>
-              </button>
-            </form>
-          </div>
-        </section>
-      </div>
-    );
-  }
-
-  return content;
+      ) : null}
+    </div>
+  );
 };
 
 export default Searchbar;
