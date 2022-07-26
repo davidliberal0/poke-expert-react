@@ -1,0 +1,47 @@
+.landing-section {
+  height: 1200px;
+  width: 100%;
+}
+
+.landing-title-box {
+  height: 100%;
+  max-height: 500px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.landing-left {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-width: 985px;
+}
+
+.explore-button {
+  width: 100%;
+  max-width: 100px;
+  transition: 0.4s;
+}
+
+.build-button {
+  width: 100%;
+  max-width: 100px;
+  transition: 0.4s;
+}
+
+.delphox-img {
+  position: absolute;
+  border: 0;
+  right: 630px;
+  bottom: 150px;
+  height: 100%;
+  max-height: 944px;
+  width: 100%;
+  max-width: 585px;
+  border: none;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  -webkit-box-shadow: none;
+}
