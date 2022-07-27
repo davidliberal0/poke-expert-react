@@ -4,19 +4,14 @@
 }
 
 .landing-title-box {
+  text-align: center;
   height: 100%;
   max-height: 500px;
-  padding: 20px;
+  /* padding: 20px; */
   width: 100%;
-  max-width: 600px;
+  max-width: 1200px;
 }
 
-.landing-left {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  max-width: 985px;
-}
 
 .explore-button {
   width: 100%;
@@ -25,15 +20,17 @@
 }
 
 .build-button {
+  text-transform: uppercase;
   width: 100%;
-  max-width: 100px;
-  transition: 0.4s;
+  max-width: 200px;
+  height: 4rem;
+  transition: 0.9s;
 }
 
-.delphox-img {
+/* .delphox-img {
   position: absolute;
   border: 0;
-  right: 630px;
+  right: 330px;
   bottom: 150px;
   height: 100%;
   max-height: 944px;
@@ -44,4 +41,15 @@
   -moz-box-shadow: none;
   -o-box-shadow: none;
   -webkit-box-shadow: none;
+} */
+
+.main-land-line {
+  /* text-align: center; */
+  width: 100%;
+  max-width: 50rem;
+}
+
+
+.github-link {
+  border: 1px solid white;
 }
