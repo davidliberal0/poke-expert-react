@@ -16,7 +16,7 @@
 .explore-button {
   width: 100%;
   max-width: 100px;
-  transition: 0.4s;
+  transition: background-color 0.4s;
 }
 
 .build-button {
@@ -24,7 +24,11 @@
   width: 100%;
   max-width: 200px;
   height: 4rem;
-  transition: 0.9s;
+  transition: all 0.9s;
+}
+
+.build-button:hover {
+  box-shadow: rgba(255, 42, 0,0.56) 0px 0px 70px 4px;
 }
 
 /* .delphox-img {
@@ -51,5 +55,12 @@
 
 
 .github-link {
-  border: 1px solid white;
+  width: 300px;
+  transition: 0.4s;
+}
+
+
+.seperator {
+  height: 10px;
+  width: 300px;
 }
