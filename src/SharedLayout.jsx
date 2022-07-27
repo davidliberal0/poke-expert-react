@@ -10,7 +10,7 @@ const SharedLayout = () => {
       <div className="page-container">
         <Outlet />
       </div>
-      <Footer />
+      <Footer/>
     </>
   );
 };

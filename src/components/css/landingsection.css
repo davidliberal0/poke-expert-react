@@ -1,7 +1,6 @@
 .landing-section {
   height: 50vh;
   width: 100%;
-  border: 2px solid red;
 }
 
 .landing-title-box {
@@ -25,7 +24,7 @@
   width: 100%;
   max-width: 200px;
   height: 4rem;
-  transition: all 0.9s;
+  transition: all 0.6s;
 }
 
 .build-button:hover {
