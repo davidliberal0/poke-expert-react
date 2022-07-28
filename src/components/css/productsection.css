@@ -1,9 +1,10 @@
 .product-section {
-	height: 70vh;
+    height: 100%;
+	min-height: 1000px;
 }
 
 .box {
-    width: 1400px;
+    width: 1000px;
     height: 800px;
     line-height: 350px;
 		border-radius: 20px;
@@ -35,7 +36,7 @@
 }
 
 .box::after {
-    filter: blur(80px);
+    filter: blur(50px);
 }
 
 @keyframes border {

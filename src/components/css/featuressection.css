@@ -1,5 +1,6 @@
 .features-section {
-    height: 25vh;
+    height: 100%;
+    min-height: 30vh;
 }
 
 .bullet-land {
