@@ -6,11 +6,11 @@ import ProductSection from "./ProductSection";
 const HomePage = () => {
   return (
     <div className="bg-black">
-      <LandingSection/>
-      <ProductSection/>
-      <FeaturesSection/>
+      <LandingSection />
+      <ProductSection />
+      <FeaturesSection />
     </div>
-  )
+  );
 };
 
 export default HomePage;
