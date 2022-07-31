@@ -7,7 +7,7 @@ const AboutHeading = () => {
       style={{ height: "50vh" }}
     >
       <div className="text-white">
-        The minds behind {}
+        The mind behind {}
         <span className="font-bold text-red-500 tracking-normal">
           Poké<span className="text-white">Expert.</span>
         </span>

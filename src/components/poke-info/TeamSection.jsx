@@ -13,12 +13,6 @@ const TeamSection = () => {
           imgSrc={david}
           teamTitle={"Front-End Engineer"}
         />
-        <div className="h-0.5 w-96 bg-white mr-6 ml-6"></div>
-        <ContributorImg
-          teamMemb={"Jason Saini"}
-          imgSrc={jason}
-          teamTitle={"Back-End Engineer"}
-        />
       </div>
     </div>
   );

@@ -34,7 +34,7 @@ const LandingSection = () => {
             </button> */}
             <button
               type="button"
-              class="build-button bg-red-700 rounded-xl text-white hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-bold rounded px-4 py-2 text-center mr-2 mb-2"
+              class="build-button bg-red-700 rounded-xl text-white hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-bold px-4 py-2 text-center mr-2 mb-2"
             >
               Start searching
             </button>
