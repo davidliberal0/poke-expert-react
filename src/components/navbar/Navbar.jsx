@@ -13,16 +13,6 @@ const Navbar = () => {
             </h1>
           </NavLink>
           <ul className="text-white sm:self-center border-t sm:border-none nav-links text-sm">
-            <li className="sm:inline-block" id="link-un">
-              <a href="#" className="p-3">
-                region
-              </a>
-            </li>
-            <li className="sm:inline-block" id="link-un">
-              <a href="#" className="p-3">
-                tips
-              </a>
-            </li>
             <li className="sm:inline-block">
               <NavLink
                 to="/database"
@@ -37,6 +27,26 @@ const Navbar = () => {
               >
                 database
               </NavLink>
+            </li>
+            <li className="sm:inline-block">
+              <NavLink
+                to="/builder"
+                className="p-3"
+                id="link-selected"
+                style={({ isActive }) => {
+                  return {
+                    fontSize: isActive ? "23px" : "",
+                    color: isActive ? "#f15b5e" : "",
+                  };
+                }}
+              >
+                Builder
+              </NavLink>
+            </li>
+            <li className="sm:inline-block" id="link-un">
+              <a href="#" className="p-3">
+                tips
+              </a>
             </li>
             <li className="sm:inline-block" id="link-un">
               <NavLink
