@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./components/homepage/HomePage";
 import SearchPage from "./components/mainSearch/SearchPage";
 import AboutPage from "./components/poke-info/AboutPage";
-import TeamBuilderPage from "./components/teamBuilder/TeamBuilderPage";
+import TeamBuilderPage from "./components/team-builder/TeamBuilderPage";
 import SharedLayout from "./SharedLayout";
 
 function App() {
