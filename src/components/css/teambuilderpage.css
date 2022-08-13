@@ -2,6 +2,11 @@
   width: 100%;
 }
 
+.poke-search-content {
+  width: 100%;
+  max-width: 4000px;
+}
+
 .team-build-page {
   width: 100%;
   max-width: 4000px;

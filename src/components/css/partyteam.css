@@ -3,3 +3,14 @@
   width: 400px;
   max-width: 500px;
 }
+
+.done-button {
+  text-transform: uppercase;
+  width: 100%;
+  height: 3rem;
+  transition: all 0.6s;
+}
+
+.done-button:hover {
+  box-shadow: rgba(255, 42, 0, 0.56) 0px 0px 70px 4px;
+}
