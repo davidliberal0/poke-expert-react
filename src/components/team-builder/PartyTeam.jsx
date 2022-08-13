@@ -5,7 +5,7 @@ const PartyTeam = () => {
   return (
     <div className="bg-black side-bar ">
       <form>
-        <div className="party-team flex flex-col mr-8">
+        <div className="party-team flex flex-col">
           <div className="text-4xl">TEAM</div>
           <div className="party-items-container"></div>
           <div className="flex flex-col">

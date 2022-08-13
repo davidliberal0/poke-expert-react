@@ -9,7 +9,9 @@ const TeamBuilderPage = () => {
       <div className="team-build-page flex">
         <PartyTeam />
         <div className="poke-content-side">
-          <Searchbar />
+          <div className="poke-search-content">
+            <Searchbar />
+          </div>
         </div>
       </div>
     </div>

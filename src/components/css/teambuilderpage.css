@@ -1,3 +1,8 @@
 .poke-content-side {
-  width: 800px;
+  width: 100%;
+}
+
+.team-build-page {
+  width: 100%;
+  max-width: 4000px;
 }
