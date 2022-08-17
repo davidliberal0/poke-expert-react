@@ -1,11 +1,20 @@
+import axios from "axios";
 import React from "react";
+import { useEffect, useState } from "react";
 
 const PokemonSelector = () => {
-  async function fetchPokemon() {
-    return;
-  }
+  console.log("rendered");
 
-  return <div className="bg-black">Something</div>;
+  useEffect(() => {
+    async function fetchData() {
+      const url = "https://pokeapi.co/api/v2/pokemon/";
+      const res = await axios.get(`${url}${"1"}`);
+      console.log(res.data);
+    }
+    fetchData();
+  }, []);
+
+  return <div className="bg-black">Something Goes Here</div>;
 };
 
 export default PokemonSelector;
