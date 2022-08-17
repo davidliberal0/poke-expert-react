@@ -63,7 +63,6 @@ const Searchbar = () => {
     const specURL = `https://pokeapi.co/api/v2/pokemon-species/`;
     const dexNumber = `${res.data["game_indices"][8]["game_index"]}`;
     const fetchSpec = await axios.get(`${specURL}${dexNumber}`);
-    const desc = document.querySelector("#poke-desc");
     setPokeInfo((prev) => ({
       ...prev,
       desc: fetchSpec.data["flavor_text_entries"][1]["flavor_text"],
