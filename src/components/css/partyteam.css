@@ -2,6 +2,7 @@
   height: 100vh;
   width: 400px;
   max-width: 500px;
+  margin-right: 10px;
 }
 
 .done-button {
