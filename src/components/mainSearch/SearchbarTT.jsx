@@ -40,7 +40,7 @@ const Searchbar = () => {
         }`,
         type: res.data["types"][0]["type"]["name"],
         img: `${res.data["sprites"]["front_default"]}`,
-        dexNum: `#${res.data["game_indices"][8]["game_index"]}`,
+        dexNum: `#${res.data["id"]}`,
       }));
       if ("typeTwo" in pokeInfo) {
         delete pokeInfo.typeTwo;
@@ -54,7 +54,7 @@ const Searchbar = () => {
         type: res.data["types"][0]["type"]["name"],
         typeTwo: res.data["types"][1]["type"]["name"],
         img: `${res.data["sprites"]["front_default"]}`,
-        dexNum: `#${res.data["game_indices"][8]["game_index"]}`,
+        dexNum: `#${res.data["id"]}`,
       }));
     }
   };
