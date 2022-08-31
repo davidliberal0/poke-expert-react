@@ -57,48 +57,53 @@ const PokeCard = (props) => {
 
   return (
     <section className="rect-section text-white">
-      <div
-        className="rect"
-        style={{
-          display: "flex",
-          boxShadow: isHovering
-            ? `${rgbas[props.typeOne]}0.56) 0px 22px 70px 4px`
-            : "none",
-        }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+      <a
+        href={`https://bulbapedia.bulbagarden.net/wiki/${props.pokeName}_(Pokémon)`}
+        target="_blank"
       >
-        <img src={props.pokeImg} alt="" className="legendary-image mr-6" />
-        <div className="rect-name-type mr-6">
-          <h3 className="pokemon-name">{props.pokeName}</h3>
-          <h3 className="dex-number">{props.dexNum}</h3>
-          <div
-            className="type"
-            style={{
-              backgroundColor: typeColor[props.typeOne],
-              color: "black",
-            }}
-          >
-            {props.typeOne.charAt(0).toUpperCase() + props.typeOne.slice(1)}
+        <div
+          className="rect"
+          style={{
+            display: "flex",
+            boxShadow: isHovering
+              ? `${rgbas[props.typeOne]}0.56) 0px 22px 70px 4px`
+              : "none",
+          }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <img src={props.pokeImg} alt="" className="legendary-image mr-6" />
+          <div className="rect-name-type mr-6">
+            <h3 className="pokemon-name">{props.pokeName}</h3>
+            <h3 className="dex-number">{props.dexNum}</h3>
+            <div
+              className="type"
+              style={{
+                backgroundColor: typeColor[props.typeOne],
+                color: "black",
+              }}
+            >
+              {props.typeOne.charAt(0).toUpperCase() + props.typeOne.slice(1)}
+            </div>
+            <div
+              className="type-two"
+              style={
+                "typeTwo" in props
+                  ? {
+                      backgroundColor: typeColor[props.typeTwo],
+                      textTransform: "capitalize",
+                      color: "black",
+                      display: "block",
+                    }
+                  : {}
+              }
+            >
+              {"typeTwo" in props ? props.typeTwo : ""}
+            </div>
           </div>
-          <div
-            className="type-two"
-            style={
-              "typeTwo" in props
-                ? {
-                    backgroundColor: typeColor[props.typeTwo],
-                    textTransform: "capitalize",
-                    color: "black",
-                    display: "block",
-                  }
-                : {}
-            }
-          >
-            {"typeTwo" in props ? props.typeTwo : ""}
-          </div>
+          <div className="poke-desc">{props.desc}</div>
         </div>
-        <div className="poke-desc">{props.desc}</div>
-      </div>
+      </a>
     </section>
   );
 };
