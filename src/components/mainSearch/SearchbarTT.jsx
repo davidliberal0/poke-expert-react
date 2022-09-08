@@ -63,9 +63,22 @@ const Searchbar = () => {
     const specURL = `https://pokeapi.co/api/v2/pokemon-species/`;
     const dexNumber = `${res.data["id"]}`;
     const fetchSpec = await axios.get(`${specURL}${dexNumber}`);
+    let description = null;
+    // Function that searches for the english description - o(n) time complexity
+    function descFetch() {
+      let count = 0;
+      for (let info of fetchSpec.data["flavor_text_entries"]) {
+        if (info.language["name"] === "en") {
+          return `${fetchSpec.data["flavor_text_entries"][count]["flavor_text"]}`;
+        }
+        count++;
+      }
+    }
+    // store the found english description
+    description = descFetch();
     setPokeInfo((prev) => ({
       ...prev,
-      desc: fetchSpec.data["flavor_text_entries"][1]["flavor_text"],
+      desc: description,
     }));
     setShowCard(true);
   }
