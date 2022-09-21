@@ -1,14 +1,15 @@
 .product-section {
     height: 100%;
-	min-height: 1000px;
+    min-height: 1000px;
 }
 
 .box {
-    width: 1000px;
-    height: 800px;
+    min-width: 1500px;
+    min-height: 950px;
     line-height: 350px;
-		border-radius: 20px;
-    background: url('../imgs/searchimg.png');
+    border-radius: 20px;
+    background: url("../imgs/builderimage.png") no-repeat;
+    /* background-size: contain; */
     color: #ffffff;
     font-size: 38px;
     font-weight: 700;
@@ -16,20 +17,30 @@
     text-transform: uppercase;
 }
 
+/* TODO: Responsive Product Image on landing page - use media quereis e*/
 
-
-.box::before, .box::after {
-		border-radius: 20px;
-    content: '';
+.box::before,
+.box::after {
+    border-radius: 20px;
+    content: "";
     z-index: -1;
     position: absolute;
     width: calc(100% + 6px);
     height: calc(100% + 6px);
     top: -3px;
     left: -3px;
-    background: linear-gradient(45deg,
-    #fc0090, #0000ff, #00ff00, #ff0000, #ffff00,
-    #fc0090, #0000ff, #00ff00, #ff0000, #ffff00
+    background: linear-gradient(
+        45deg,
+        #fc0090,
+        #0000ff,
+        #00ff00,
+        #ff0000,
+        #ffff00,
+        #fc0090,
+        #0000ff,
+        #00ff00,
+        #ff0000,
+        #ffff00
     );
     background-size: 300%;
     animation: border 20s linear infinite;
@@ -40,13 +51,12 @@
 }
 
 @keyframes border {
-
-    0%, 100% {
+    0%,
+    100% {
         background-position: 0 0;
     }
 
     50% {
         background-position: 300%;
     }
-    
 }
