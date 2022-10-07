@@ -1,5 +1,4 @@
 import React from "react";
-import SearchImg from "../imgs/searchimg.png";
 import "../css/productsection.css";
 
 const ProductSection = () => {

@@ -1,6 +1,6 @@
 .landing-section {
   height: 100%;
-  min-height: 50vh;
+  min-height: 30vh;
   width: 100%;
 }
 
@@ -12,7 +12,6 @@
   width: 100%;
   max-width: 1200px;
 }
-
 
 .explore-button {
   width: 100%;
@@ -29,7 +28,7 @@
 }
 
 .build-button:hover {
-  box-shadow: rgba(255, 42, 0,0.56) 0px 0px 70px 4px;
+  box-shadow: rgba(255, 42, 0, 0.56) 0px 0px 70px 4px;
 }
 
 /* .delphox-img {
@@ -54,12 +53,10 @@
   max-width: 50rem;
 }
 
-
 .github-link {
   width: 300px;
   transition: 0.4s;
 }
-
 
 .seperator {
   height: 10px;

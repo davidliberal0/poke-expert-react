@@ -7,6 +7,20 @@
 }
 
 .ez-div {
-  max-width: 80em;
+  max-width: 100em;
   width: 100%;
+}
+
+@media all and (max-width: 1088px) {
+  .footer-section {
+    max-width: 400px;
+  }
+
+  /* .ez-div {
+    flex-direction: column;
+  } */
+
+  .foot-title {
+    margin-top: 2.5rem;
+  }
 }

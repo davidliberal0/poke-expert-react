@@ -1,11 +1,75 @@
 .product-section {
-    height: 100%;
-    min-height: 1000px;
+  height: 100%;
+  min-height: 1000px;
 }
 
 .box {
-    min-width: 1500px;
-    min-height: 950px;
+  min-width: 1500px;
+  min-height: 950px;
+  line-height: 350px;
+  border-radius: 20px;
+  background: url("../imgs/buildpageimage.png") no-repeat;
+  /* background-size: contain; */
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* TODO: Responsive Product Image on landing page - use media quereis e*/
+
+.box::before,
+.box::after {
+  border-radius: 20px;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  top: -3px;
+  left: -3px;
+  background: linear-gradient(
+    45deg,
+    #fc0090,
+    #0000ff,
+    #00ff00,
+    #ff0000,
+    #ffff00,
+    #fc0090,
+    #0000ff,
+    #00ff00,
+    #ff0000,
+    #ffff00
+  );
+  background-size: 300%;
+  animation: border 20s linear infinite;
+}
+
+.box::after {
+  filter: blur(50px);
+}
+
+@keyframes border {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 300%;
+  }
+}
+
+@media all and (max-width: 1510px) {
+  .product-section {
+    height: 100%;
+    min-height: 750px;
+  }
+
+  .box {
+    min-width: 1068px;
+    min-height: 786px;
     line-height: 350px;
     border-radius: 20px;
     background: url("../imgs/buildpageimage.png") no-repeat;
@@ -15,48 +79,26 @@
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
+  }
 }
 
-/* TODO: Responsive Product Image on landing page - use media quereis e*/
+@media all and (max-width: 1088px) {
+  .product-section {
+    height: 100%;
+    min-height: 650px;
+  }
 
-.box::before,
-.box::after {
+  .box {
+    min-width: 768px;
+    min-height: 486px;
+    line-height: 350px;
     border-radius: 20px;
-    content: "";
-    z-index: -1;
-    position: absolute;
-    width: calc(100% + 6px);
-    height: calc(100% + 6px);
-    top: -3px;
-    left: -3px;
-    background: linear-gradient(
-        45deg,
-        #fc0090,
-        #0000ff,
-        #00ff00,
-        #ff0000,
-        #ffff00,
-        #fc0090,
-        #0000ff,
-        #00ff00,
-        #ff0000,
-        #ffff00
-    );
-    background-size: 300%;
-    animation: border 20s linear infinite;
-}
-
-.box::after {
-    filter: blur(50px);
-}
-
-@keyframes border {
-    0%,
-    100% {
-        background-position: 0 0;
-    }
-
-    50% {
-        background-position: 300%;
-    }
+    background: url("../imgs/buildpageimage.png") no-repeat;
+    /* background-size: contain; */
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
