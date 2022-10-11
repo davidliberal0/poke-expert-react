@@ -1,6 +1,7 @@
 .container {
   overflow: visible;
   position: relative;
+  transition: all 0.2s ease-in-out;
 }
 
 #x {
@@ -14,4 +15,21 @@
   border: 2px solid red;
   padding-left: 2px;
   border-radius: 20px;
+}
+
+.rect-section {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Test Values */
+.rect-section:hover {
+  transform: scale(1.1);
+}
+
+.rect {
+  transition: none;
+}
+
+.rect:hover {
+  transform: none;
 }
