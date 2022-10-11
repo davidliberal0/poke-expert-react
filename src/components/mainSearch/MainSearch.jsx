@@ -1,5 +1,5 @@
 import React from "react";
-import SearchbarTT from "./SearchbarTT";
+import Searchbar from "./Searchbar";
 
 function MainSearch() {
   return (
@@ -16,7 +16,7 @@ function MainSearch() {
           </section>
         </div>
       </section>
-      <SearchbarTT />
+      <Searchbar />
     </div>
   );
 }

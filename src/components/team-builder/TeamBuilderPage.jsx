@@ -2,8 +2,8 @@ import React from "react";
 import "../css/teambuilderpage.css";
 import PartyTeam from "./PartyTeam";
 import "../css/searchbar.css";
-import Searchbar from "../mainSearch/SearchbarTT";
 import PokemonSelector from "./PokemonSelector";
+import Searchbar from "../mainSearch/Searchbar";
 
 const TeamBuilderPage = () => {
   return (

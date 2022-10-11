@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  /* transition: all 0.2s ease-in-out; */
 }
 
 .rect {
@@ -29,6 +30,13 @@
 .rect:hover {
   transform: scale(1.1);
 }
+
+/* Test Values */
+/* .rect-section:hover {
+  transform: scale(1.1);
+} */
+
+/* -------------- */
 
 .type {
   text-align: center;
