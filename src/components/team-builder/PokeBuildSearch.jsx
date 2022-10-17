@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../css/searchbar.css";
+import "../css/pokebuildsearch.css";
 import PokeBuildCard from "./PokeBuildCard";
 import axios from "axios";
 import { useTransition, animated } from "react-spring";
@@ -29,10 +30,11 @@ const Searchbar = () => {
     receiveData(res);
     updateDesc(res);
     setShowCard(true);
+    // setDisplayCard("block"); // control card display
   }
 
   const receiveData = (res) => {
-    if (res.data["types"].length == 1) {
+    if (res.data["types"].length === 1) {
       setPokeInfo((prev) => ({
         ...prev,
         name: `${
@@ -81,6 +83,7 @@ const Searchbar = () => {
       desc: description,
     }));
     setShowCard(true);
+    // setDisplayCard("block"); // control card disply
   }
 
   return (
@@ -115,16 +118,21 @@ const Searchbar = () => {
       {transition((style, item) =>
         item ? (
           <animated.div style={style}>
-            <PokeBuildCard
-              dexNum={pokeInfo.dexNum}
-              pokeImg={pokeInfo.img}
-              pokeName={pokeInfo.name}
-              typeOne={pokeInfo.type}
-              desc={pokeInfo.desc}
-              typeTwo={
-                pokeInfo.hasOwnProperty("typeTwo") ? pokeInfo.typeTwo : null
-              }
-            />
+            <div className="container">
+              <button id="x">x</button>
+              <PokeBuildCard
+                dexNum={pokeInfo.dexNum}
+                pokeImg={pokeInfo.img}
+                pokeName={pokeInfo.name}
+                typeOne={pokeInfo.type}
+                desc={pokeInfo.desc}
+                typeTwo={
+                  pokeInfo.hasOwnProperty("typeTwo") ? pokeInfo.typeTwo : null
+                }
+                // displayCard={displayCard}
+                showCard={setShowCard}
+              />
+            </div>
           </animated.div>
         ) : null
       )}

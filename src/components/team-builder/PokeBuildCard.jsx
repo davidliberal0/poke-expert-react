@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../css/pokecard.css";
 import "../css/pokebuildcard.css";
 
 // All Possible Types w/ Color Hex Values
@@ -45,30 +44,22 @@ const rgbas = {
   rock: "rgba(174, 150, 77,",
 };
 
-const PokeCard = (props) => {
+const PokeBuildCard = (props) => {
+  console.log("CARD RENDERED");
   const [isHovering, setIsHovering] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovering(false);
-  };
-
   return (
-    <section className="rect-section text-white container">
-      <button id="x">X</button>
+    <section className="rect-build-section text-white">
       <div
-        className="rect"
+        className="rect-build"
         style={{
           display: "flex",
           boxShadow: isHovering
             ? `${rgbas[props.typeOne]}0.56) 0px 22px 70px 4px`
             : "none",
         }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
       >
         <img src={props.pokeImg} alt="" className="legendary-image mr-6" />
         <div className="rect-name-type mr-6">
@@ -105,4 +96,4 @@ const PokeCard = (props) => {
   );
 };
 
-export default PokeCard;
+export default PokeBuildCard;
