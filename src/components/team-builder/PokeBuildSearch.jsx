@@ -26,11 +26,9 @@ const Searchbar = () => {
     const searchTerm = event.target.elements.query.value.toLowerCase();
     const url = "https://pokeapi.co/api/v2/pokemon/";
     const res = await axios.get(`${url}${searchTerm}`);
-    // console.log(res);
     receiveData(res);
     updateDesc(res);
     setShowCard(true);
-    // setDisplayCard("block"); // control card display
   }
 
   const receiveData = (res) => {
@@ -83,7 +81,6 @@ const Searchbar = () => {
       desc: description,
     }));
     setShowCard(true);
-    // setDisplayCard("block"); // control card disply
   }
 
   return (
@@ -119,7 +116,9 @@ const Searchbar = () => {
         item ? (
           <animated.div style={style}>
             <div className="container">
-              <button id="x">x</button>
+              <button id="x" onClick={() => setShowCard(false)}>
+                x
+              </button>
               <PokeBuildCard
                 dexNum={pokeInfo.dexNum}
                 pokeImg={pokeInfo.img}

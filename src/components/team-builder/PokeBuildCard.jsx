@@ -45,7 +45,6 @@ const rgbas = {
 };
 
 const PokeBuildCard = (props) => {
-  console.log("CARD RENDERED");
   const [isHovering, setIsHovering] = useState(false);
 
   return (
