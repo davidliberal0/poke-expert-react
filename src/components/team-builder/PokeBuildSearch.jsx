@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../css/searchbar.css";
 import "../css/pokebuildsearch.css";
 import PokeBuildCard from "./PokeBuildCard";
@@ -116,6 +116,7 @@ const Searchbar = () => {
         item ? (
           <animated.div style={style}>
             <div className="container">
+              <button id="plus">+</button>
               <button id="x" onClick={() => setShowCard(false)}>
                 x
               </button>
@@ -128,8 +129,6 @@ const Searchbar = () => {
                 typeTwo={
                   pokeInfo.hasOwnProperty("typeTwo") ? pokeInfo.typeTwo : null
                 }
-                // displayCard={displayCard}
-                showCard={setShowCard}
               />
             </div>
           </animated.div>
