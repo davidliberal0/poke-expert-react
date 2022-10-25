@@ -1,0 +1,31 @@
+.team-image-sprite {
+  width: 80px;
+  height: 80px;
+}
+
+.member-type {
+  text-align: center;
+  background-color: #f15b5e;
+  border-radius: 5px;
+  width: 4rem;
+  height: 1.5rem;
+}
+
+.member-type-two {
+  /* display: none; */
+  margin-left: 3px;
+  text-align: center;
+  background-color: #f15b5e;
+  border-radius: 5px;
+  width: 4rem;
+  height: 1.5rem;
+}
+
+.party-items-container {
+  z-index: 1;
+  width: 300px;
+}
+
+.party-item {
+  border: 2px solid red;
+}
