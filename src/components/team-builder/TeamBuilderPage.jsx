@@ -7,20 +7,7 @@ import PokemonSelector from "./PokemonSelector";
 import PokeBuildSearch from "./PokeBuildSearch";
 
 const TeamBuilderPage = () => {
-  const [members, setMember] = useState([
-    {
-      pokename: "David",
-      id: 1,
-    },
-    {
-      pokename: "Jason",
-      id: 2,
-    },
-    {
-      pokename: "Chelsea",
-      id: 3,
-    },
-  ]); // top level
+  const [members, setMember] = useState([{}]); // top level
 
   // Delete team member
   const deleteMember = (id) => {

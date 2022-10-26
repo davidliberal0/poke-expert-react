@@ -7,10 +7,13 @@ const Team = (props) => {
     <div className="party-items-container">
       {props.members.map((member) => (
         <Pokemon
-          key={member.id}
-          member={member.pokename}
+          key={member.dexNum}
+          member={member.name}
           onDelete={props.onDelete}
-          id={member.id}
+          id={member.dexNum}
+          img={member.img}
+          type={member.type}
+          typeTwo={member.typeTwo}
         />
       ))}
     </div>
