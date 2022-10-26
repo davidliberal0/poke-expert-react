@@ -2,27 +2,7 @@ import React, { useState } from "react";
 import "../css/partyteam.css";
 import Team from "./Team.jsx";
 
-const PartyTeam = () => {
-  const [members, setMember] = useState([
-    {
-      pokename: "David",
-      id: 1,
-    },
-    {
-      pokename: "Jason",
-      id: 2,
-    },
-    {
-      pokename: "Chelsea",
-      id: 3,
-    },
-  ]); // top level
-
-  // Delete team member
-  const deleteMember = (id) => {
-    console.log("delete", id);
-  };
-
+const PartyTeam = (props) => {
   return (
     <div className="bg-black side-bar">
       <form className="flex justify-center">
@@ -30,7 +10,7 @@ const PartyTeam = () => {
           <div className="text-4xl">TEAM</div>
           <div className="party-items-container bg-stone-900 flex flex-cols items-center">
             {/* This is where the party/team component will be injected */}
-            <Team members={members} onDelete={deleteMember} />
+            <Team members={props.members} onDelete={props.onDelete} />
           </div>
           <div className="flex flex-col">
             <div className="mb-4">
