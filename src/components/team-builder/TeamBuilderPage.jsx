@@ -27,13 +27,19 @@ const TeamBuilderPage = () => {
     console.log("delete", id);
   };
 
+  // function for adding a member to the team
+  const addMember = (pokeInfo) => {
+    setMember((prev) => [...prev, pokeInfo]);
+    console.log(members);
+  };
+
   return (
     <div className="text-white">
       <div className="team-build-page flex">
         <PartyTeam members={members} onDelete={deleteMember} />
         <div className="poke-content-side flex flex-col items-center">
           <div className="poke-search-content mt-5">
-            <PokeBuildSearch />
+            <PokeBuildSearch addMember={addMember} />
           </div>
           <PokemonSelector />
         </div>

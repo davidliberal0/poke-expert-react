@@ -5,7 +5,7 @@ import PokeBuildCard from "./PokeBuildCard";
 import axios from "axios";
 import { useTransition, animated } from "react-spring";
 
-const Searchbar = () => {
+const Searchbar = (props) => {
   const [searchItem, isSubmitted] = useState("");
   const [pokeInfo, setPokeInfo] = useState({});
   const [showCard, setShowCard] = useState(false);
@@ -116,7 +116,9 @@ const Searchbar = () => {
         item ? (
           <animated.div style={style}>
             <div className="container">
-              <button id="plus">+</button>
+              <button id="plus" onClick={() => props.addMember(pokeInfo)}>
+                +
+              </button>
               <button id="x" onClick={() => setShowCard(false)}>
                 x
               </button>
