@@ -60,6 +60,7 @@ const PokeCard = (props) => {
       <a
         href={`https://bulbapedia.bulbagarden.net/wiki/${props.pokeName}_(Pokémon)`}
         target="_blank"
+        rel="noreferrer"
       >
         <div
           className="rect"

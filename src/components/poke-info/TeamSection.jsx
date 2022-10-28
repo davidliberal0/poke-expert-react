@@ -2,7 +2,6 @@ import React from "react";
 import "../css/teamsection.css";
 import ContributorImg from "./ContributorImg";
 import david from "../imgs/david.jpg";
-import jason from "../imgs/jason.png";
 
 const TeamSection = () => {
   return (

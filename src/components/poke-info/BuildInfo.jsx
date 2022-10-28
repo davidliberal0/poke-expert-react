@@ -1,7 +1,6 @@
 import React from "react";
 import "../css/buildinfo.css";
 import site from "../imgs/site.png";
-import ImageProto from "./ImageProto";
 
 const BuildInfo = () => {
   return (
