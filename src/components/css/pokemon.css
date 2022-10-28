@@ -5,10 +5,12 @@
 
 .member-type {
   text-align: center;
+  margin-left: 3px;
   background-color: #f15b5e;
   border-radius: 5px;
   width: 4rem;
   height: 1.5rem;
+  margin-bottom: 3px;
 }
 
 .member-type-two {
@@ -27,5 +29,28 @@
 }
 
 .party-item {
-  border: 2px solid red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.name-column {
+  display: flex;
+  max-width: 500px;
+  flex-direction: column;
+}
+
+/* Testing */
+.wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  margin-right: 3px;
+  margin-top: 3px;
 }
