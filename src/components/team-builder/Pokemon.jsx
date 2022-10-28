@@ -1,7 +1,26 @@
 import React from "react";
 import "../css/pokemon.css";
 import { FaTimes } from "react-icons/fa";
-import squirtle from "../imgs/squirtle-sprite.png";
+
+const typeColor = {
+  ground: "#b59469",
+  water: "#0037ff",
+  fire: "#ff2a00",
+  grass: "#0b7026",
+  ghost: "#310273",
+  dragon: "#964ef5",
+  steel: "#8a8888",
+  fairy: "#b569b4",
+  psychic: "#f781ef",
+  normal: "#e3d8ca",
+  fighting: "#800c04",
+  flying: "#c5b8e3",
+  dark: "#0f0f1f",
+  electric: "#ffee00",
+  poison: "#772ff5",
+  ice: "#14bbe0",
+  rock: "#AE964D",
+};
 
 const Pokemon = (props) => {
   return (
@@ -10,8 +29,24 @@ const Pokemon = (props) => {
         <img className="team-image-sprite" src={props.img} alt="" />
         <div className="name-column ml-2">
           <h1 className="mr-2 mb-5 mt-5 text-lg">{props.member}</h1>
-          <div className="member-type">{props.type}</div>
-          <div className="member-type-two">{props.typeTwo}</div>
+          <div
+            className="member-type"
+            style={{
+              backgroundColor: `${typeColor[props.type]}`,
+              textTransform: "capitalize",
+            }}
+          >
+            {props.type}
+          </div>
+          <div
+            className="member-type-two"
+            style={{
+              backgroundColor: `${typeColor[props.typeTwo]}`,
+              textTransform: "capitalize",
+            }}
+          >
+            {props.typeTwo}
+          </div>
         </div>
         <p className="ml-8">lvl. 100</p>
       </div>
