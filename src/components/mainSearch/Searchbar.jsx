@@ -32,7 +32,7 @@ const Searchbar = () => {
   }
 
   const receiveData = (res) => {
-    if (res.data["types"].length == 1) {
+    if (res.data["types"].length === 1) {
       setPokeInfo((prev) => ({
         ...prev,
         name: `${
