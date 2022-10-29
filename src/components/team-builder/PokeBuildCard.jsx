@@ -69,9 +69,10 @@ const PokeBuildCard = (props) => {
             style={{
               backgroundColor: typeColor[props.typeOne],
               color: "black",
+              textTransform: "capitalize",
             }}
           >
-            {props.typeOne.charAt(0).toUpperCase() + props.typeOne.slice(1)}
+            {props.typeOne}
           </div>
           <div
             className="type-two"

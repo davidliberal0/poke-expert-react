@@ -3,6 +3,7 @@ import "../css/pokemon.css";
 import Pokemon from "./Pokemon.jsx";
 
 const Team = (props) => {
+  console.log(`team: ${props.members}`);
   return (
     <div className="party-items-container">
       {props.members.map((member) => (

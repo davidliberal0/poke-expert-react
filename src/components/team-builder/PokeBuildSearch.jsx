@@ -39,12 +39,14 @@ const Searchbar = (props) => {
           res.data["name"].charAt(0).toUpperCase() + res.data["name"].slice(1)
         }`,
         type: res.data["types"][0]["type"]["name"],
+        typeTwo: null,
         img: `${res.data["sprites"]["front_default"]}`,
         dexNum: `#${res.data["id"]}`,
       }));
-      if ("typeTwo" in pokeInfo) {
-        delete pokeInfo.typeTwo;
-      }
+      // TODO : find work around
+      // if ("typeTwo" in pokeInfo) {
+      //   delete pokeInfo.typeTwo;
+      // }
     } else {
       setPokeInfo((prev) => ({
         ...prev,
@@ -128,9 +130,7 @@ const Searchbar = (props) => {
                 pokeName={pokeInfo.name}
                 typeOne={pokeInfo.type}
                 desc={pokeInfo.desc}
-                typeTwo={
-                  pokeInfo.hasOwnProperty("typeTwo") ? pokeInfo.typeTwo : null
-                }
+                typeTwo={pokeInfo.typeTwo != null ? pokeInfo.typeTwo : null}
               />
             </div>
           </animated.div>

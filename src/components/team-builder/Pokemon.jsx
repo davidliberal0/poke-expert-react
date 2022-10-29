@@ -40,12 +40,18 @@ const Pokemon = (props) => {
           </div>
           <div
             className="member-type-two"
-            style={{
-              backgroundColor: `${typeColor[props.typeTwo]}`,
-              textTransform: "capitalize",
-            }}
+            style={
+              props.typeTwo
+                ? {
+                    backgroundColor: typeColor[props.typeTwo],
+                    textTransform: "capitalize",
+                    color: "black",
+                    display: "block",
+                  }
+                : {}
+            }
           >
-            {props.typeTwo}
+            {props.typeTwo ? props.typeTwo : ""}
           </div>
         </div>
         <p className="ml-8">lvl. 100</p>

@@ -8,6 +8,7 @@ import PokeBuildSearch from "./PokeBuildSearch";
 
 const TeamBuilderPage = () => {
   const [members, setMember] = useState([]); // top level
+  console.log(members);
 
   // Delete team member
   const deleteMember = (id) => {
@@ -17,7 +18,7 @@ const TeamBuilderPage = () => {
   // function for adding a member to the team
   const addMember = (pokeInfo) => {
     setMember((prev) => [...prev, pokeInfo]);
-    console.log(members);
+    // console.log(members);
   };
 
   return (

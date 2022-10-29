@@ -14,7 +14,7 @@
 }
 
 .member-type-two {
-  /* display: none; */
+  display: none;
   margin-left: 3px;
   text-align: center;
   background-color: #f15b5e;

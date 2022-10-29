@@ -8,7 +8,7 @@ const PartyTeam = (props) => {
       <form className="flex justify-center">
         <div className="party-team flex flex-col">
           <div className="text-4xl">TEAM</div>
-          <div className="party-items-container bg-stone-900 flex flex-cols items-center">
+          <div className="party-items-container flex flex-cols items-center">
             {/* This is where the party/team component will be injected */}
             <Team members={props.members} onDelete={props.onDelete} />
           </div>
