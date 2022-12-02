@@ -44,7 +44,6 @@ const Searchbar = (props) => {
         typeTwo: null,
         img: `${res.data["sprites"]["front_default"]}`,
         dexNum: `#${res.data["id"]}`,
-        uuid: uuidv4(),
       }));
       // TODO : find work around
       // if ("typeTwo" in pokeInfo) {
@@ -60,7 +59,6 @@ const Searchbar = (props) => {
         typeTwo: res.data["types"][1]["type"]["name"],
         img: `${res.data["sprites"]["front_default"]}`,
         dexNum: `#${res.data["id"]}`,
-        uuid: uuidv4(),
       }));
     }
   };

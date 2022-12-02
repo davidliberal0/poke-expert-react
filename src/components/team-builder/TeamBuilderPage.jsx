@@ -16,13 +16,16 @@ const TeamBuilderPage = () => {
     console.log("delete", uuid);
     setMember((prev) => {
       console.log(`This is previous: ${members}`);
-      return prev.filter((member) => member.uuid !== uuid);
+      return prev.filter((pokemon) => pokemon.uuid !== uuid);
     });
   };
 
   // function for adding a member to the team
   const addMember = (pokeInfo) => {
-    setMember((prev) => [...prev, pokeInfo]);
+    // hold info for new member
+    const newMember = { uuid: uuidv4(), ...pokeInfo };
+    console.log(newMember);
+    setMember((prev) => [...prev, newMember]);
   };
 
   return (

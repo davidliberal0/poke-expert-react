@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/pokemon.css";
 import Pokemon from "./Pokemon.jsx";
+import { v4 as uuidv4 } from "uuid";
 
 const Team = (props) => {
   console.log(`team: ${props.members}`);
@@ -8,14 +9,14 @@ const Team = (props) => {
     <div className="party-items-container">
       {props.members.map((member) => (
         <Pokemon
-          key={member.dexNum}
+          key={uuidv4()}
           member={member.name}
           onDelete={props.onDelete}
           id={member.dexNum}
           img={member.img}
           type={member.type}
           typeTwo={member.typeTwo}
-          uuid={member.uuid}
+          pokemon={member}
         />
       ))}
     </div>
