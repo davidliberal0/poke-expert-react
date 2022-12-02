@@ -59,7 +59,7 @@ const Pokemon = (props) => {
       <div className="close">
         <FaTimes
           style={{ color: "red", cursor: "pointer" }}
-          onClick={() => props.onDelete(props.id)}
+          onClick={() => props.onDelete(props.uuid)}
         />
       </div>
     </div>

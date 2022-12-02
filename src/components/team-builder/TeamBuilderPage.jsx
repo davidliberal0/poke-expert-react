@@ -5,20 +5,24 @@ import "../css/searchbar.css";
 import PokemonSelector from "./PokemonSelector";
 // import Searchbar from "../mainSearch/Searchbar";
 import PokeBuildSearch from "./PokeBuildSearch";
+import { v4 as uuidv4 } from "uuid";
 
 const TeamBuilderPage = () => {
   const [members, setMember] = useState([]); // top level
   console.log(members);
 
   // Delete team member
-  const deleteMember = (id) => {
-    console.log("delete", id);
+  const deleteMember = (uuid) => {
+    console.log("delete", uuid);
+    setMember((prev) => {
+      console.log(`This is previous: ${members}`);
+      return prev.filter((member) => member.uuid !== uuid);
+    });
   };
 
   // function for adding a member to the team
   const addMember = (pokeInfo) => {
     setMember((prev) => [...prev, pokeInfo]);
-    // console.log(members);
   };
 
   return (

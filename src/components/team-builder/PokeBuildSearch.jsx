@@ -4,6 +4,8 @@ import "../css/pokebuildsearch.css";
 import PokeBuildCard from "./PokeBuildCard";
 import axios from "axios";
 import { useTransition, animated } from "react-spring";
+// for unique identifier
+import { v4 as uuidv4 } from "uuid";
 
 const Searchbar = (props) => {
   const [searchItem, isSubmitted] = useState("");
@@ -42,6 +44,7 @@ const Searchbar = (props) => {
         typeTwo: null,
         img: `${res.data["sprites"]["front_default"]}`,
         dexNum: `#${res.data["id"]}`,
+        uuid: uuidv4(),
       }));
       // TODO : find work around
       // if ("typeTwo" in pokeInfo) {
@@ -57,6 +60,7 @@ const Searchbar = (props) => {
         typeTwo: res.data["types"][1]["type"]["name"],
         img: `${res.data["sprites"]["front_default"]}`,
         dexNum: `#${res.data["id"]}`,
+        uuid: uuidv4(),
       }));
     }
   };
@@ -131,6 +135,7 @@ const Searchbar = (props) => {
                 typeOne={pokeInfo.type}
                 desc={pokeInfo.desc}
                 typeTwo={pokeInfo.typeTwo != null ? pokeInfo.typeTwo : null}
+                uuid={pokeInfo.uuid}
               />
             </div>
           </animated.div>

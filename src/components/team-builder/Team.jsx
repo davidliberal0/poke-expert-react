@@ -15,6 +15,7 @@ const Team = (props) => {
           img={member.img}
           type={member.type}
           typeTwo={member.typeTwo}
+          uuid={member.uuid}
         />
       ))}
     </div>
