@@ -5,7 +5,6 @@ import PokeBuildCard from "./PokeBuildCard";
 import axios from "axios";
 import { useTransition, animated } from "react-spring";
 // for unique identifier
-import { v4 as uuidv4 } from "uuid";
 
 const Searchbar = (props) => {
   const [searchItem, isSubmitted] = useState("");
