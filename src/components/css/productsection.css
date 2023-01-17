@@ -69,11 +69,11 @@
 
   .box {
     min-width: 1068px;
-    min-height: 786px;
+    min-height: 695px;
     line-height: 350px;
     border-radius: 20px;
     background: url("../imgs/buildpageimage.png") no-repeat;
-    /* background-size: contain; */
+    background-size: contain;
     color: #ffffff;
     font-size: 38px;
     font-weight: 700;
@@ -89,12 +89,12 @@
   }
 
   .box {
-    min-width: 768px;
+    min-width: 748px;
     min-height: 486px;
     line-height: 350px;
     border-radius: 20px;
     background: url("../imgs/buildpageimage.png") no-repeat;
-    /* background-size: contain; */
+    background-size: contain;
     color: #ffffff;
     font-size: 38px;
     font-weight: 700;
