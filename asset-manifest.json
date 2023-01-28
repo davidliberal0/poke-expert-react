@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/poke-expert-react/static/css/main.c2e1a3b7.css",
-    "main.js": "/poke-expert-react/static/js/main.834cbeaa.js",
+    "main.js": "/poke-expert-react/static/js/main.29dfcc1d.js",
     "static/media/site.png": "/poke-expert-react/static/media/site.de59ba7c8cccdd165879.png",
     "static/media/buildpageimage.png": "/poke-expert-react/static/media/buildpageimage.5b68d1540f7a169f0fd0.png",
     "static/media/david.jpg": "/poke-expert-react/static/media/david.319be0534b294e46cdd6.jpg",
     "index.html": "/poke-expert-react/index.html",
     "main.c2e1a3b7.css.map": "/poke-expert-react/static/css/main.c2e1a3b7.css.map",
-    "main.834cbeaa.js.map": "/poke-expert-react/static/js/main.834cbeaa.js.map"
+    "main.29dfcc1d.js.map": "/poke-expert-react/static/js/main.29dfcc1d.js.map"
   },
   "entrypoints": [
     "static/css/main.c2e1a3b7.css",
-    "static/js/main.834cbeaa.js"
+    "static/js/main.29dfcc1d.js"
   ]
 }
