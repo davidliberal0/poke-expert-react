@@ -4,7 +4,7 @@ import Team from "./Team.jsx";
 
 const PartyTeam = (props) => {
   return (
-    <div className="bg-black side-bar">
+    <div className="side-bar rounded-2xl ">
       <form className="flex justify-center">
         <div className="party-team flex flex-col">
           <div className="text-4xl">TEAM</div>

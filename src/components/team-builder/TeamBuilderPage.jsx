@@ -29,11 +29,11 @@ const TeamBuilderPage = () => {
   };
 
   return (
-    <div className="text-white">
+    <div className="text-white bg-black">
       <div className="team-build-page flex">
         <PartyTeam members={members} onDelete={deleteMember} />
         <div className="poke-content-side flex flex-col items-center">
-          <div className="poke-search-content mt-5">
+          <div className="poke-search-content mt-5 ">
             <PokeBuildSearch addMember={addMember} />
           </div>
           <PokemonSelector />
