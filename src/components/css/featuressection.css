@@ -11,4 +11,8 @@
   .features-section {
     flex-direction: column;
   }
+
+  .bullet-land {
+    margin-bottom: 4rem;
+  }
 }
