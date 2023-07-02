@@ -19,6 +19,7 @@ const typeColor = {
   electric: "#ffee00",
   poison: "#772ff5",
   ice: "#14bbe0",
+  bug: "#c5f542",
   rock: "#AE964D",
 };
 
@@ -41,6 +42,7 @@ const rgbas = {
   electric: "rgba(255, 238, 0,",
   poison: "rgba(119, 47, 245,",
   ice: "rgba(20, 187, 224,",
+  bug: "rgba(197, 245, 66,",
   rock: "rgba(174, 150, 77,",
 };
 
