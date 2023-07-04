@@ -34,6 +34,7 @@ const Pokemon = (props) => {
             style={{
               backgroundColor: `${typeColor[props.type]}`,
               textTransform: "capitalize",
+              color: "black",
             }}
           >
             {props.type}
