@@ -95,7 +95,7 @@ const Searchbar = (props) => {
               <input
                 value={searchItem.query}
                 type="text"
-                placeholder="START LOOKING FOR POKEMON..."
+                placeholder="Search Database..."
                 className="search-box"
                 name="query"
                 onChange={handleChange}
