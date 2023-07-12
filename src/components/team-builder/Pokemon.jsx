@@ -30,8 +30,9 @@ const Pokemon = (props) => {
         style={{
           backgroundColor: "black",
           borderRight: `0.5rem solid ${typeColor[props.type]}`,
-          borderBottomRightRadius: "5px",
-          borderTopRightRadius: "5px",
+          borderRadius: "5px",
+          // borderBottomRightRadius: "5px",
+          // borderTopRightRadius: "5px",
         }}
       >
         <img className="team-image-sprite" src={props.img} alt="" />

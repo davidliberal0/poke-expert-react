@@ -25,7 +25,13 @@ const TeamBuilderPage = () => {
     // hold info for new member
     const newMember = { uuid: uuidv4(), ...pokeInfo };
     console.log(newMember);
-    setMember((prev) => [...prev, newMember]);
+
+    // limit the amount of new party members to 6
+    if (members.length < 6) {
+      setMember((prev) => [...prev, newMember]);
+    } else {
+      alert("Cannot exceed 6 party members");
+    }
   };
 
   return (
