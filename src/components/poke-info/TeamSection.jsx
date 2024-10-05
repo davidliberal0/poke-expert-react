@@ -10,7 +10,7 @@ const TeamSection = () => {
         <ContributorImg
           teamMemb={"David Liberal"}
           imgSrc={david}
-          teamTitle={"Front-End Engineer"}
+          teamTitle={"Software Engineer"}
         />
       </div>
     </div>
