@@ -1,7 +1,16 @@
 import React from "react";
 import "../css/landingsection.css";
+import { useNavigate } from "react-router-dom";
 
 const LandingSection = () => {
+
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/database')
+  }
+
+
   return (
     <div className="landing-section text-white flex flex-col items-center justify-between">
       {/* left side */}
@@ -32,6 +41,7 @@ const LandingSection = () => {
               Build
             </button> */}
             <button
+              onClick={handleButtonClick}
               type="button"
               className="build-button bg-red-700 rounded-xl text-white hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-bold px-4 py-2 text-center mr-2 mb-2"
             >
