@@ -42,7 +42,7 @@ const TeamBuilderPage = () => {
           <div className="poke-search-content mt-5 ">
             <PokeBuildSearch addMember={addMember} />
           </div>
-          <PokemonSelector />
+          <PokemonSelector addMember={addMember}/>
         </div>
       </div>
     </div>
