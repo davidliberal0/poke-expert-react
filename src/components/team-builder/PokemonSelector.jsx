@@ -60,7 +60,6 @@ const PokemonSelector = ({ addMember, members }) => { // Destructure addMember a
 
   return (
     <>
-      <div className="bg-black text-white p-4">Something Goes Here</div>
       <div className="grid grid-cols-10 gap-4 p-4">
         {fetchedPoke.map((pokemon) => (
           <div
