@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { v4 as uuidv4 } from 'uuid'; // Ensure you import uuid
 
-const PokemonSelector = (props) => {
+const PokemonSelector = ({ addMember, members }) => { // Destructure addMember and members from props
   const [fetchedPoke, setFetchedPoke] = useState([]);
-  const [pokeInfo, setPokeInfo] = useState([]); 
-
+  const [pokeInfo, setPokeInfo] = useState({});
+  
   useEffect(() => {
     fetchAllPokemon();
   }, []);
 
   const handlePokemonClick = async (pokemonName) => {
-    console.log(pokemonName)
-    const searchName = pokemonName.toLowerCase()
+    const searchName = pokemonName.toLowerCase();
     const searchURL = `https://pokeapi.co/api/v2/pokemon/`; 
-    const res = await axios.get(`${searchURL}${searchName}`)
-    receiveData(res) 
-  }
+    const res = await axios.get(`${searchURL}${searchName}`);
+    receiveData(res);
+  };
 
   async function fetchAllPokemon() {
     const numberToSelect = 50;
@@ -29,7 +29,7 @@ const PokemonSelector = (props) => {
       const response = await axios.get(pokeURL.url);
       return {
         name: response.data.name,
-        sprite: response.data.sprites.front_default,
+        sprite: response.data.sprites.front_default || 'path/to/fallback/image.png', // Fallback image
       };
     });
 
@@ -38,47 +38,36 @@ const PokemonSelector = (props) => {
   }
 
   const receiveData = (res) => {
-    if (res.data["types"].length === 1) {
-      setPokeInfo((prev) => ({
-        ...prev,
-        name: `${
-          res.data["name"].charAt(0).toUpperCase() + res.data["name"].slice(1)
-        }`,
-        type: res.data["types"][0]["type"]["name"],
-        typeTwo: null,
-        img: `${res.data["sprites"]["front_default"]}`,
-        dexNum: `#${res.data["id"]}`,
-      }));
-      // TODO : find work around
-      // if ("typeTwo" in pokeInfo) {
-      //   delete pokeInfo.typeTwo;
-      // }
-    } else {
-      setPokeInfo((prev) => ({
-        ...prev,
-        name: `${
-          res.data["name"].charAt(0).toUpperCase() + res.data["name"].slice(1)
-        }`,
-        type: res.data["types"][0]["type"]["name"],
-        typeTwo: res.data["types"][1]["type"]["name"],
-        img: `${res.data["sprites"]["front_default"]}`,
-        dexNum: `#${res.data["id"]}`,
-      }));
-    }
-  }    
- 
-  
+    const name = res.data.name.charAt(0).toUpperCase() + res.data.name.slice(1);
+    const type = res.data.types[0].type.name;
+    const typeTwo = res.data.types.length > 1 ? res.data.types[1].type.name : null;
+    const img = res.data.sprites.front_default || 'path/to/fallback/image.png'; // Fallback image
+    const dexNum = `#${res.data.id}`;
+
+    const newPokeInfo = {
+      name,
+      type,
+      typeTwo,
+      img,
+      dexNum,
+    };
+
+    setPokeInfo(newPokeInfo);
+    
+    // Call addMember immediately after updating pokeInfo
+    addMember({ uuid: uuidv4(), ...newPokeInfo }); 
+  };
 
   return (
     <>
       <div className="bg-black text-white p-4">Something Goes Here</div>
       <div className="grid grid-cols-10 gap-4 p-4">
         {fetchedPoke.map((pokemon) => (
-          <div key={pokemon.name} className="flex flex-col items-center bg-white rounded-lg p-2 shadow-md" onClick={() => {
-            handlePokemonClick(pokemon.name)
-            setTimeout(() => {
-              props.addMember(pokeInfo)
-            }, 300)}}>
+          <div
+            key={pokemon.name}
+            className="flex flex-col items-center bg-black rounded-lg p-2 shadow-md cursor-pointer"
+            onClick={() => handlePokemonClick(pokemon.name)}
+          >
             <img src={pokemon.sprite} alt={pokemon.name} className="w-20 h-auto" />
             <p className="text-center">{pokemon.name}</p>
           </div>
