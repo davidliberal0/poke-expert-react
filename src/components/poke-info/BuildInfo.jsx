@@ -12,16 +12,16 @@ const BuildInfo = () => {
           </div>
           <br />
           <p>
-            During the design process, I focused on creating a web application
+            During the design process, we focused on creating a web application
             that could deliver information in the simplest way possible. After
-            multiple iterations of design, I settled for a minimal modern
+            multiple iterations of design, we settled for a minimal modern
             approach.
           </p>
           <br />
           <p>
-            In its first prototype the site was full of a veriety of colors,
-            which was very distracting. So, I went back to the drawing board,
-            and removed the colors completely. Additionally, I stream-lined all
+            In its first prototype the site was full of a variety of colors,
+            which was very distracting. So, we went back to the drawing board,
+            and removed the colors completely. Additionally, we stream-lined all
             information on the site. The result was the first minimal pokemon
             database on the web.
           </p>
