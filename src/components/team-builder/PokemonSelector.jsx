@@ -29,7 +29,7 @@ const PokemonSelector = ({ addMember, members }) => { // Destructure addMember a
       const response = await axios.get(pokeURL.url);
       return {
         name: response.data.name,
-        sprite: response.data.sprites.front_default || 'path/to/fallback/image.png', // Fallback image
+        sprite: response.data.sprites.front_default // TODO: add a path to fallback on 
       };
     });
 

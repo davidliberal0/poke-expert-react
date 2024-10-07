@@ -19,6 +19,7 @@ const typeColor = {
   electric: "#ffee00",
   poison: "#772ff5",
   ice: "#14bbe0",
+  bug: "#c5f542",
   rock: "#AE964D",
 };
 
