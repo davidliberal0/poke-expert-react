@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid'; // Ensure you import uuid
 const PokemonSelector = ({ addMember, members }) => { // Destructure addMember and members from props
   const [fetchedPoke, setFetchedPoke] = useState([]);
   const [pokeInfo, setPokeInfo] = useState({});
+  const [isHovering, setIsHovering] = useState(false);
   
   useEffect(() => {
     fetchAllPokemon();
@@ -37,6 +38,14 @@ const PokemonSelector = ({ addMember, members }) => { // Destructure addMember a
     setFetchedPoke(pokemons);
   }
 
+  const handleMouseEnter = () => {
+    setIsHovering(true); 
+  }
+
+  const handleMouseLeave = () => {
+    setIsHovering(false); 
+  }
+
   const receiveData = (res) => {
     const name = res.data.name.charAt(0).toUpperCase() + res.data.name.slice(1);
     const type = res.data.types[0].type.name;
@@ -64,8 +73,13 @@ const PokemonSelector = ({ addMember, members }) => { // Destructure addMember a
         {fetchedPoke.map((pokemon) => (
           <div
             key={pokemon.name}
-            className="flex flex-col items-center bg-black rounded-lg p-2 shadow-md cursor-pointer"
+            className="flex flex-col items-center bg-black rounded-lg p-2 shadow-md cursor-pointer bg-zinc-900"
             onClick={() => handlePokemonClick(pokemon.name)}
+            style={{
+              boxShadow: isHovering ? `rgba(197, 184, 227,0.56) 0px 22px 10px 4px` : "none",
+            }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <img src={pokemon.sprite} alt={pokemon.name} className="w-20 h-auto" />
             <p className="text-center">{pokemon.name}</p>
